@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>L O V E</title>
+      <link rel="icon" href="love.ico" type="image/x-icon">
+      <style type="text/css">
+         @keyframes draw {
+         100% { stroke-dashoffset: 0 }
+         }
+         path {
+         animation: draw 2s ease-in-out infinite;
+         }
+         body {
+         padding: 0;
+         margin: 0;
+         height: 100vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+         }
+         svg {
+         width: 100px;
+         margin-bottom: 20px;
+         }
+         button {
+         font-size: 16px;
+         padding: 10px 20px;
+         background-color: #DA72B2;
+         color: white;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+         transition: background-color 0.2s ease-in-out;
+         }
+         button:hover {
+         background-color: #C54C8A;
+         }
+         #cool-text {
+         display: none;
+         font-size: 24px;
+         font-weight: bold;
+         color: #DA72B2;
+         margin-top: 10px;
+         }
+         /* media queries */
+         @media only screen and (max-width: 768px) {
+         /* adjust styles for smaller screens */
+         svg {
+         width: 75px;
+         margin-bottom: 10px;
+         }
+         button {
+         font-size: 14px;
+         padding: 8px 16px;
+         }
+         #cool-text {
+         font-size: 20px;
+         margin-top: 5px;
+         }
+         }
+      </style>
+   </head>
+   <body>
+      <button id="cool-button" style="">Press me!</button>
+      <p id="cool-text" style="display: none;"></p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" style="display: none;">
+         <defs>
+            <clipPath id="hc">
+               <path d="M 191 207 C 162 162 112 54 51 70 C -22 121 143 314 188 356 C 234 303 400 157 352 88 C 324 54 214 171 191 207 Z " />
+            </clipPath>
+         </defs>
+         <path fill="none" stroke="#DA72B2" stroke-width="44" stroke-linecap="round" stroke-dasharray="3703" stroke-dashoffset="3703" clip-path="url(#hc)" d="M 120 0 C 88 77 -2 154 3 160 C 8 166 182 47 189 57 C 196 67 2 223 7 228 C 12 233 183 98 192 109 C 201 120 24 280 31 289 C 38 298 349 44 356 53 C 363 62 73 310 88 329 C 304 201 387 88 383 85 C 379 82 112 361 121 370 C 130 379 348 162 356 171"></path>
+      </svg>
+      <script>
+         const coolButton = document.querySelector("#cool-button");
+         const coolText = document.querySelector("#cool-text");
+         const coolSvg = document.querySelector("svg");
+
+         const texts = [
+         "You are cool!",
+         "You are awesome!",
+         "You are amazing!",
+         "You are fantastic!",
+         "You are the sunshine of my life.",
+         "You make my heart skip a beat.",
+         "You are the best thing that ever happened to me.",
+         "I love you more than words can say.",
+         "You are my everything.",
+         "I am so lucky to have you in my life.",
+         "You light up my world.",
+         "You are my soulmate.",
+         "I can't imagine my life without you.",
+         "You complete me.",
+         "I am so grateful for you.",
+         "I love you to the moon and back.",
+         "You are my forever and always.",
+         "You are the missing piece to my puzzle.",
+         "You are my one and only.",
+         "I love you more today than yesterday.",
+         "You are my happily ever after.",
+         "You are the reason for my smile.",
+         "You are my better half.",
+         "I will love you always and forever.",
+         "You are my dream come true.",
+         "I can't get enough of you.",
+         "You make my world a better place.",
+         "You are the love of my life.",
+         "You are the apple of my eye.",
+         "You mean everything to me.",
+         "I cherish you more each day.",
+         "You make my heart sing.",
+         "You are my rock.",
+         "You are my best friend and lover.",
+         "I am so lucky to call you mine.",
+         "You take my breath away.",
+         "You are my reason to live.",
+         "I love you more than anything in this world.",
+         "You are the yin to my yang.",
+         "You are my forever friend and partner.",
+         "You are my sunshine on a cloudy day.",
+         "You are the light of my life.",
+         "You are my heart and soul.",
+         "I love you now and forever.",
+         "You are the one I want to spend the rest of my life with.",
+         "You are my knight in shining armor.",
+         "You are the missing piece to my heart.",
+         "You make me the happiest person in the world.",
+         "You are the love that I have been searching for.",
+         "You are my happily ever after.",
+         "You complete me in every way.",
+         "I love you more than you will ever know.",
+         "You are my heart's desire.",
+         "You are my one and only true love.",
+         "You are my soulmate and partner for life.",
+         "I love you more with each passing day.",
+         "You are the love of my life, my soulmate, my everything."
+         ];
+
+
+         coolButton.addEventListener("click", () => {
+           coolButton.style.display = "none";
+           coolSvg.style.display = "block";
+           coolText.style.display = "block";
+           coolText.textContent = texts[Math.floor(Math.random() * texts.length)];
+         });
+      </script>
+   </body>
+</html>
